@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'deva-pipes';
+  cpf = "37350299060";
+  cnpg = "25112220000138";
+  documento!: string;
 }
