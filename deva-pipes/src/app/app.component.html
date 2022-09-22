@@ -1,4 +1,7 @@
 <p>Document cpf number: {{ cpf | cpfCnpj }}</p>
 
 <p>Document cnpj number: {{ cnpg  | cpfCnpj }}</p><br><br>
-<input type="text"  name="" id="" [(ngModel)]="documento" [value]="documento  | cpfCnpj"  placeholder="Document here"> <br>
+<input type="text"  name="" id=""
+ [(ngModel)]="documento" [value]="documento  | cpfCnpj"
+ (ngModelChange)="documento=$event"
+placeholder="Document here"> <br>
