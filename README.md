@@ -1,9 +1,15 @@
 
 
-```diff
-  <h1 style="color:orange;">DevaPipes</h1>
-```
 
+  <h1 style="color:orange;">DevaPipes</h1>
+
+```diff
++ Green
+- Red
+! DevaPipe
+@@ Pink @@
+# Gray
+...
 My Instagram [senhora.deva](https://www.instagram.com/senhora.deva/)
 <hr>
 
