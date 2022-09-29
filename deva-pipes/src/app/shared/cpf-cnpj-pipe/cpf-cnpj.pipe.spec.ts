@@ -8,15 +8,12 @@ describe(CpfCnpjPipe.name, () => {
     expect(pipe).toBeTruthy();
   });
 
-  it('transforms "37350299060" to "373.502.990-60"', () => {
-   expect(pipe.transform('37350299060')).toBe('373.502.990-60');
-	});
-
-  it('transforms "25112220000138" to "25.112.220/0001-38"', () => {
-    expect(pipe.transform('25112220000138')).toBe('25.112.220/0001-38');
-   });
-
-   it('Should document lenght > 14 return empty string', () => {
-    expect(pipe.transform('2511222000013866788888')).toBe('');
-   });
+   [['37350299060', '373.502.990-60'],
+   ['25112220000138', '25.112.220/0001-38'],
+   ['2511222000013866788888', '']
+  ].forEach(([doc, expected]) => {
+    it(`Should return doc ${expected} for string ${doc}`, () => {
+     expect(pipe.transform(doc)).toBe(expected);
+    });
+  })
 });
