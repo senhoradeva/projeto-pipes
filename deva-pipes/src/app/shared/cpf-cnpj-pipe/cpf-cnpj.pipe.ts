@@ -1,44 +1,32 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'cpfCnpj'
+  name: 'cpfCnpj',
 })
 export class CpfCnpjPipe implements PipeTransform {
-
-  transform(cpf: string): string {
-    cpf = cpf?.replace(/\D/g, '');
-    //TODO tratar length de digitos
-
-    let mask = cpf?.toString()?.replace(cpf, '');
-    const tamMask = mask?.length;
-   // console.log('TAM', tamMask)
-
-
-    if(cpf) {
-      if(cpf.length > 14) {
-
-        console.log('TAM', cpf)
-
-        alert("erro")
-        cpf = cpf.substring(0, -1);
+  transform(document: string): string {
+    if (document) {
+      document = document?.replace(/\D/g, '');
+      if (document.length > 14) {
+        document = document.toString().replace(document, '');
+        //   document = document.substring(0, -1);
       }
-      if (cpf.length <= 11) {
-        cpf = cpf.substring(0, 11);
-        cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2');
-        cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2');
-        cpf = cpf.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
-      } else {
-        cpf = cpf.substring(0, 14);
 
-        cpf = cpf.replace(/^(\d{2})(\d)/, '$1.$2');
-        cpf = cpf.replace(/^(\d{2})\.(\d{3})(\d)/, '$1.$2.$3');
-        cpf = cpf.replace(/\.(\d{3})(\d)/, '.$1/$2');
-        cpf = cpf.replace(/(\d{4})(\d)/, '$1-$2');
+      if (document.length <= 11) {
+        document = document.substring(0, 11);
+        document = document.replace(/(\d{3})(\d)/, '$1.$2');
+        document = document.replace(/(\d{3})(\d)/, '$1.$2');
+        document = document.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+      } else {
+        document = document.substring(0, 14);
+
+        document = document.replace(/^(\d{2})(\d)/, '$1.$2');
+        document = document.replace(/^(\d{2})\.(\d{3})(\d)/, '$1.$2.$3');
+        document = document.replace(/\.(\d{3})(\d)/, '.$1/$2');
+        document = document.replace(/(\d{4})(\d)/, '$1-$2');
       }
     }
 
-
-    return cpf;
+    return document;
   }
-
 }
