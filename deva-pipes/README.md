@@ -1,5 +1,7 @@
 # DevaPipes
 
+My Instagram [a link](https://www.instagram.com/senhora.deva/)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.3.
 
 ## Development server
@@ -17,7 +19,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Running unit tests
 
 * Run `ng test` to execute the unit tests;
-* Run test-covarage to execut the covarage tests;
+* Run `test-covarage` to execut the covarage tests;
 
 
 
