@@ -1,5 +1,21 @@
 <p>Document cpf number: {{ cpf | cpfCnpj }}</p>
 
 <p>Document cnpj number: {{ cnpg | cpfCnpj }}</p>
-<br /><br />
+
 <p>Mobile number: {{ cardNumber | creditCard:2 }}</p>
+<br /><br />
+<section>
+  <div>
+    0
+    <input type="range" min="0" max="100" [value]="sladerAge"
+    (input)="sladerAge = $any($event.target).value"
+    >
+    100
+  </div>
+  <span>{{sladerAge}}</span>
+  <ul>
+    <li *ngFor="let user of users | age:sladerAge">
+      {{user.name}} ({{user.age}})
+    </li>
+  </ul>
+</section>

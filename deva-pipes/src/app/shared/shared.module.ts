@@ -7,6 +7,6 @@ import { AgePipe } from './age-pipe/age.pipe';
 @NgModule({
   declarations: [CpfCnpjPipe, CreditCardPipe, AgePipe],
   imports: [CommonModule],
-  exports: [CpfCnpjPipe, CreditCardPipe],
+  exports: [CpfCnpjPipe, CreditCardPipe, AgePipe],
 })
 export class SharedModule {}
