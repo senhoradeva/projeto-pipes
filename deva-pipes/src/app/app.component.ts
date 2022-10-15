@@ -39,3 +39,35 @@ export class AppComponent {
     }
   ];
 }
+
+// $bg-color: #9400d3;
+
+// .btn-base {
+//   padding: 0.3rem;
+//   border-radius: 0.2rem;
+//   border: 0;
+//   text-decoration: none;
+//   cursor: pointer;
+// }
+
+// .btn {
+//   @extend .btn-base;
+//   background-color: $bg-color;
+// }
+
+
+
+
+
+// @mixin btn($bg-color: #f0eaee) {
+//   text-decoration: none;
+//   cursor: pointer;
+//   display: inline-block;
+//   border: 0;
+//   background-color: $bg-color;
+//   transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+//   padding: 0.3rem;
+//   border-radius: 0.2rem;
+// }
+
+
